@@ -20,7 +20,7 @@
 			$cover = imageCreateFromJpeg($url);
 			list($w, $h) = getImageSize($url);
 			imageCopyResized($coverArts, $cover, 200*$i++, 0, 0, 0, 200, 200, $w, $h);
-			imagedestroy($cover);
+			imageDestroy($cover);
 		}
 
 		header ("Content-type: image/jpeg");
